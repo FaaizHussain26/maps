@@ -1,9 +1,4 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 // Current Home Locations
 const currentDestinations = [
@@ -132,7 +127,7 @@ declare global {
 
 export default function DestinationsPage() {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [map, setMap] = useState<any>(null);
+  const [, setMap] = useState<any>(null);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const currentInfoWindowRef = useRef<any>(null);
   const closeInfoWindowTimeoutRef = useRef<NodeJS.Timeout | null>(null);

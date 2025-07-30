@@ -1,33 +1,12 @@
+import { BarChart3, Bell, Brain, Plus, Search } from "lucide-react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import {
-  Bot,
-  Brain,
-  Settings,
-  Users,
-  BarChart3,
-  Plus,
-  Search,
-  Bell,
-  User,
-  ChevronDown,
-} from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
