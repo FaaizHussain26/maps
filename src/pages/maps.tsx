@@ -1,4 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, ExternalLink } from "lucide-react";
+
+import RocksImage from "/assets/Rocks_101.png";
+import TamarindoImage from "/assets/Tamarindo.jpg";
+import McHenryImage from "/assets/McHenry_Canyon_Haven.png";
+import DeerHollowImage from "/assets/Deer_Hollow_Hideaway.png";
+import VillaNicklausImage from "/assets/Villa_Nicklaus.png";
+import CapCanaImage from "/assets/cap_cana_1.png";
+import FiveStarBrandTurks from "/assets/5_sta_brand_Turks_Caicos.png";
+import FiveStarBrandFred from "/assets/5_star_brand_Fredericksburg_tx.png";
+import FiveStarBrandMiches from "/assets/5_star_brand_Miches_DR.jpg";
+import MijasLaSierra from "/assets/Mijas_La_Sierra.png";
+import DolceGabbana from "/assets/d_and_g.png";
+import Rocks103 from "/assets/Rocks_103.png";
 
 // Current Home Locations
 const currentDestinations = [
@@ -8,8 +26,9 @@ const currentDestinations = [
     location: "Scottsdale, Arizona",
     address: "27440 N Alma School Pkwy, Scottsdale, AZ 85262",
     coordinates: { lat: 33.6054, lng: -111.8998 },
-    url: "",
+    url: "https://www.luxusvp.com/rentals/the-rocks-103-north-scottsdale-arizona",
     type: "current",
+    image: Rocks103, // Direct path from public folder
   },
   {
     id: 2,
@@ -17,8 +36,9 @@ const currentDestinations = [
     location: "Costa Rica",
     address: "C. Vascos, Provincia de Guanacaste, Tamarindo, 50309, Costa Rica",
     coordinates: { lat: 10.2994, lng: -85.8394 },
-    url: "",
+    url: "https://tamaluxury.com/rentals/brisas-del-mar/",
     type: "current",
+    image: TamarindoImage, // Direct path from public folder
   },
   {
     id: 3,
@@ -26,8 +46,9 @@ const currentDestinations = [
     location: "Deer Valley, Utah",
     address: "1702 Glencoe Mountain Wy, Park City, UT 84060",
     coordinates: { lat: 40.6374, lng: -111.4783 },
-    url: "",
+    url: "https://www.luxusvp.com/rentals/mchenry-canyon-haven",
     type: "current",
+    image: McHenryImage, // Direct path from public folder
   },
   {
     id: 4,
@@ -35,8 +56,9 @@ const currentDestinations = [
     location: "Deer Valley, Utah",
     address: "1702 Glencoe Mountain Wy, Park City, UT 84060",
     coordinates: { lat: 40.6274, lng: -111.4683 },
-    url: "",
+    url: "https://www.luxusvp.com/rentals/deer-hollow-hideaway-deer-valley-utah",
     type: "current",
+    image: DeerHollowImage, // Direct path from public folder
   },
   {
     id: 5,
@@ -44,8 +66,9 @@ const currentDestinations = [
     location: "Marbella, Spain",
     address: "Nueva Andalucia, Marbella Spain",
     coordinates: { lat: 36.5108, lng: -4.8844 },
-    url: "",
+    url: "https://vacationmarbella.com/vacation-rentals/the-nicklaus-villa/",
     type: "current",
+    image: VillaNicklausImage, // Direct path from public folder
   },
   {
     id: 6,
@@ -53,8 +76,9 @@ const currentDestinations = [
     location: "Cap Cana, Dominican Republic",
     address: "Punta Cana 23000, Dominican Republic",
     coordinates: { lat: 18.5601, lng: -68.3725 },
-    url: "",
+    url: "https://www.marriott.com/en-us/hotels/pujxr-the-st-regis-cap-cana-resort/overview/",
     type: "current",
+    image: CapCanaImage, // Direct path from public folder
   },
 ];
 
@@ -68,6 +92,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 18.9833, lng: -69.0333 },
     url: "https://www.goforthglobal.com/dream-home/5-star-branded-caribbean-resort",
     type: "anticipated",
+    image: FiveStarBrandMiches, // Direct path from public folder
   },
   {
     id: 8,
@@ -75,8 +100,9 @@ const anticipatedDestinations = [
     location: "Fredericksburg, TX",
     address: "Fredericksburg, Texas",
     coordinates: { lat: 30.2752, lng: -98.8719 },
-    url: "",
+    url: "https://www.goforthglobal.com/dream-home/5-star-branded-residence",
     type: "anticipated",
+    image: FiveStarBrandFred, // Direct path from public folder
   },
   {
     id: 9,
@@ -86,6 +112,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 36.5947, lng: -4.6364 },
     url: "https://www.goforthglobal.com/dream-home/mijas-la-sierra",
     type: "anticipated",
+    image: MijasLaSierra, // Direct path from public folder
   },
   {
     id: 10,
@@ -95,6 +122,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 21.7587, lng: -72.2845 },
     url: "https://www.goforthglobal.com/dream-home/5-star-caribbean-resort",
     type: "anticipated",
+    image: FiveStarBrandTurks, // Direct path from public folder
   },
   {
     id: 11,
@@ -104,6 +132,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 33.6044, lng: -111.8988 },
     url: "https://www.goforthglobal.com/dream-home/scottsdale-arizona-the-rocks",
     type: "anticipated",
+    image: RocksImage, // Direct path from public folder
   },
   {
     id: 12,
@@ -113,6 +142,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 36.5098, lng: -4.8854 },
     url: "https://www.goforthglobal.com/dream-home/marbella-spain-2",
     type: "anticipated",
+    image: DolceGabbana, // Direct path from public folder
   },
 ];
 
@@ -124,7 +154,6 @@ declare global {
     initMap: () => void;
   }
 }
-
 export default function DestinationsPage() {
   const mapRef = useRef<HTMLDivElement>(null);
   const [, setMap] = useState<any>(null);
@@ -141,7 +170,8 @@ export default function DestinationsPage() {
       }
 
       const script = document.createElement("script");
-      script.src = `${import.meta.env.VITE_MAP_URL}`;
+      // In a real React app, you would use process.env.REACT_APP_GOOGLE_MAPS_API_KEY or similar
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyApJ0TAYZM_KsdqTD_wJWnK-asOJGnIn5A&callback=initMap`;
       script.async = true;
       script.defer = true;
       window.initMap = initializeMap;
@@ -195,47 +225,74 @@ export default function DestinationsPage() {
           title: destination.name,
           icon: {
             path: pinPath,
-            fillColor: destination.type === "current" ? "#FFD700" : "#1e3a8a", // Yellow for current, Blue for anticipated
+            fillColor: destination.type === "current" ? "#B38C4A" : "#061A2D",
             fillOpacity: 1,
             strokeColor: "#ffffff",
             strokeWeight: 1,
-            scale: 1.5, // Adjust scale for smaller pins
-            anchor: new window.google.maps.Point(12, 24), // Adjust anchor to point to the bottom of the pin
+            scale: 1.5,
+            anchor: new window.google.maps.Point(12, 24),
           },
         });
 
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
-            <div id="info-window-content-${
-              destination.id
-            }" style="padding: 10px; min-width: 250px;">
-              <h3 style="margin: 0 0 5px 0; font-size: 16px; font-weight: bold;">${
-                destination.name
-              }</h3>
-              <p style="margin: 0 0 5px 0; color: #666; font-size: 14px;">${
-                destination.location
-              }</p>
-              <p style="margin: 0 0 10px 0; color: #888; font-size: 12px;">${
-                destination.address
-              }</p>
-              <button
-                id="explore-btn-${destination.id}"
-                style="
-                  background: #1e3a8a;
-                  color: white;
-                  border: none;
-                  padding: 8px 16px;
-                  border-radius: 4px;
-                  cursor: pointer;
-                  font-size: 14px;
-                "
-              >
-                ${
-                  destination.type === "current" ? "Explore More" : "Learn More"
-                }
-              </button>
-            </div>
-          `,
+    <style>
+    /* Hide the default Google Maps InfoWindow close button */
+    .gm-ui-hover-effect {
+      display: none !important;
+    }
+  </style>
+    <div id="info-window-content-${destination.id}" style="
+      width: 280px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2); 
+      font-family: 'Inter', sans-serif;
+    ">
+      ${
+        destination.image
+          ? `<img src="${destination.image}" alt="${destination.name}" style="
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+          " />`
+          : ""
+      }
+      <div style="padding: 12px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #333;">${
+          destination.name
+        }</h3>
+        <p style="margin: 2px 0 0; color: #555; font-size: 15px;">${
+          destination.location
+        }</p>
+        <p style="margin: 2px 0 12px; color: #777; font-size: 13px;">${
+          destination.address
+        }</p>
+        <button
+          id="explore-btn-${destination.id}"
+          style="
+            background: #061A2D; 
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px; 
+            font-weight: 600;
+            width: 100%; 
+            text-align: center;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle button shadow */
+          "
+        >
+          ${destination.type === "current" ? "Explore More" : "Learn More"}
+        </button>
+      </div>
+    </div>
+    `,
         });
 
         marker.addListener("mouseover", () => {
@@ -277,13 +334,11 @@ export default function DestinationsPage() {
               };
             }
 
-            // Re-attach button listener to ensure it's active
             const button = document.getElementById(
               `explore-btn-${destination.id}`
             );
             if (button) {
               button.onclick = () => {
-                // Use onclick directly to avoid multiple listeners
                 if (destination.url) {
                   window.open(destination.url, "_blank");
                 } else if (destination.type === "anticipated") {
@@ -291,11 +346,10 @@ export default function DestinationsPage() {
                 }
               };
             }
-          }, 0); // Use 0ms timeout to defer execution until next tick
+          }, 0);
         });
 
         marker.addListener("mouseout", () => {
-          // Set a timeout to close the info window, allowing time to move mouse to info window content
           closeInfoWindowTimeoutRef.current = setTimeout(closeInfoWindow, 100); // Delay closing
         });
       });
@@ -319,13 +373,13 @@ export default function DestinationsPage() {
           <div className="p-6 border-b bg-gray-50">
             <div className="flex flex-wrap gap-6 justify-center">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-yellow-500 border-2 border-white shadow"></div>
+                <div className="w-4 h-4 rounded-full bg-[#B38C4A] border-2 border-white shadow"></div>
                 <span className="text-sm font-medium text-gray-700">
                   Current Home Locations
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-blue-900 border-2 border-white shadow"></div>
+                <div className="w-4 h-4 rounded-full bg-[#061A2D] border-2 border-white shadow"></div>
                 <span className="text-sm font-medium text-gray-700">
                   Anticipated Home Locations
                 </span>
