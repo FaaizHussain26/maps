@@ -1,22 +1,19 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-import RocksImage from "/assets/Rocks_101.png";
-import TamarindoImage from "/assets/Tamarindo.jpg";
-import McHenryImage from "/assets/McHenry_Canyon_Haven.png";
-import DeerHollowImage from "/assets/Deer_Hollow_Hideaway.png";
-import VillaNicklausImage from "/assets/Villa_Nicklaus.png";
-import CapCanaImage from "/assets/cap_cana_1.png";
 import FiveStarBrandTurks from "/assets/5_sta_brand_Turks_Caicos.png";
 import FiveStarBrandFred from "/assets/5_star_brand_Fredericksburg_tx.png";
 import FiveStarBrandMiches from "/assets/5_star_brand_Miches_DR.jpg";
+import DeerHollowImage from "/assets/Deer_Hollow_Hideaway.png";
+import McHenryImage from "/assets/McHenry_Canyon_Haven.png";
 import MijasLaSierra from "/assets/Mijas_La_Sierra.png";
-import DolceGabbana from "/assets/d_and_g.png";
+import RocksImage from "/assets/Rocks_101.png";
 import Rocks103 from "/assets/Rocks_103.png";
+import TamarindoImage from "/assets/Tamarindo.jpg";
+import VillaNicklausImage from "/assets/Villa_Nicklaus.png";
+import CapCanaImage from "/assets/cap_cana_1.png";
+import DolceGabbana from "/assets/d_and_g.png";
 
 // Current Home Locations
 const currentDestinations = [
