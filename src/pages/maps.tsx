@@ -179,8 +179,8 @@ export default function DestinationsPage() {
       if (!mapRef.current) return;
 
       const mapInstance = new window.google.maps.Map(mapRef.current, {
-        zoom: 2,
-        center: { lat: 20, lng: 0 },
+        zoom: 3.5,
+        center: { lat: 30, lng: -40 },
         styles: [
           {
             featureType: "water",
