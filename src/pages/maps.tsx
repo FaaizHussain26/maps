@@ -18,9 +18,8 @@ import SanDiego from "/assets/San Diego.png";
 import Whistler from "/assets/Whistler.png";
 import Napa from "/assets/Napa.png";
 import ThirtyA from "/assets/30A.png";
-import Condo from "/assets/Condo.jpeg";
 import Colorado from "/assets/Colorado.png";
-
+import Huwai from "/assets/Huwai.jpeg";
 
 // Current Home Locations
 const currentDestinations = [
@@ -185,7 +184,7 @@ const anticipatedDestinations = [
     coordinates: { lat: 19.9244, lng: -155.8869 },
     url: "https://www.goforthglobal.com/dream-home/kolea-kai-condo",
     type: "anticipated",
-    image: Condo, // kept as null for newly added destination
+    image: Huwai, // kept as null for newly added destination
   },
   {
     id: 17,
