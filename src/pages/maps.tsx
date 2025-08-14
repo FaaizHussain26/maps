@@ -14,6 +14,10 @@ import TamarindoImage from "/assets/Tamarindo.jpg";
 import VillaNicklausImage from "/assets/Villa_Nicklaus.png";
 import CapCanaImage from "/assets/cap_cana_1.png";
 import DolceGabbana from "/assets/d_and_g.png";
+import SanDiego from "/assets/San Diego.png";
+import Whistler from "/assets/Whistler.png";
+import Napa from "/assets/Napa.png";
+import ThirtyA from "/assets/30A.png";
 
 // Current Home Locations
 const currentDestinations = [
@@ -77,22 +81,51 @@ const currentDestinations = [
     type: "current",
     image: CapCanaImage, // Direct path from public folder
   },
-];
-
-// Anticipated Home Locations
-const anticipatedDestinations = [
   {
     id: 7,
+    name: "5-Star Branded Caribbean Residence",
+    location: "Turks & Caicos",
+    address: "Grace Bay TKCA 1ZZ, Turks & Caicos Islands",
+    coordinates: { lat: 21.7587, lng: -72.2845 },
+    url: "https://www.goforthglobal.com/dream-home/5-star-caribbean-resort",
+    type: "current",
+    image: FiveStarBrandTurks, 
+  },
+  {
+    id: 8,
+    name: "Dolce & Gabbana Residence",
+    location: "Marbella, Spain",
+    address: "A-7176, 1, 29602 Marbella, Málaga, Spain",
+    coordinates: { lat: 36.5098, lng: -4.8854 },
+    url: "https://www.goforthglobal.com/dream-home/marbella-spain-2",
+    type: "current",
+    image: DolceGabbana, // Direct path from public folder
+  },
+  {
+    id: 9,
     name: "5-Star Branded Caribbean Resort",
     location: "Miches, Dominican Republic",
     address: "Miches, Dominican Republic",
     coordinates: { lat: 18.9833, lng: -69.0333 },
     url: "https://www.goforthglobal.com/dream-home/5-star-branded-caribbean-resort",
-    type: "anticipated",
+    type: "current",
     image: FiveStarBrandMiches, // Direct path from public folder
   },
   {
-    id: 8,
+    id: 10,
+    name: "McHenry Canyon Haven",
+    location: "Deer Valley, Utah",
+    address: "1702 Glencoe Mountain Wy, Park City, UT 84060",
+    coordinates: { lat: 40.6374, lng: -111.4783 },
+    url: "https://www.luxusvp.com/rentals/mchenry-canyon-haven-deer-valley-utah",
+    type: "current",
+    image: McHenryImage, // Direct path from public folder
+  },
+];
+// Anticipated Home Locations
+const anticipatedDestinations = [
+  {
+    id: 11,
     name: "5-Star Branded Residence",
     location: "Fredericksburg, TX",
     address: "Fredericksburg, Texas",
@@ -102,7 +135,7 @@ const anticipatedDestinations = [
     image: FiveStarBrandFred, // Direct path from public folder
   },
   {
-    id: 9,
+    id: 12,
     name: "Mijas La Sierra",
     location: "Malaga, Spain",
     address: "C. de la Virgen de la Peña, 10, 29650 Mijas, Málaga, Spain",
@@ -112,17 +145,7 @@ const anticipatedDestinations = [
     image: MijasLaSierra, // Direct path from public folder
   },
   {
-    id: 10,
-    name: "5-Star Branded Caribbean Residence",
-    location: "Turks & Caicos",
-    address: "Grace Bay TKCA 1ZZ, Turks & Caicos Islands",
-    coordinates: { lat: 21.7587, lng: -72.2845 },
-    url: "https://www.goforthglobal.com/dream-home/5-star-caribbean-resort",
-    type: "anticipated",
-    image: FiveStarBrandTurks, // Direct path from public folder
-  },
-  {
-    id: 11,
+    id: 13,
     name: "The Rocks 101",
     location: "Scottsdale, Arizona",
     address: "27440 N Alma School Pkwy, Scottsdale, AZ 85262",
@@ -131,15 +154,75 @@ const anticipatedDestinations = [
     type: "anticipated",
     image: RocksImage, // Direct path from public folder
   },
-  {
-    id: 12,
-    name: "Dolce & Gabbana Residence",
-    location: "Marbella, Spain",
-    address: "A-7176, 1, 29602 Marbella, Málaga, Spain",
-    coordinates: { lat: 36.5098, lng: -4.8854 },
-    url: "https://www.goforthglobal.com/dream-home/marbella-spain-2",
+    {
+    id: 14,
+    name: "5-Star Branded Caribbean Resort (2 BEDROOM)",
+    location: "Turks & Caicos",
+    address: "Grace Bay TKCA 1ZZ, Turks & Caicos Islands",
+    coordinates: { lat: 21.7587, lng: -72.2845 },
+    url: "https://www.goforthglobal.com/dream-home/2-bedroom-caribbean-residence",
     type: "anticipated",
-    image: DolceGabbana, // Direct path from public folder
+    image: FiveStarBrandTurks, // kept as null for newly added destination
+  },
+  {
+    id: 15,
+    name: "Beaver Creek Townhome",
+    location: "Beaver Creek, Colorado",
+    address: "38460 US-6, Avon, CO 81620",
+    coordinates: { lat: 39.6308, lng: -106.5217 },
+    url: "https://www.goforthglobal.com/dream-home/beaver-creek-co",
+    type: "anticipated",
+    image: null, // kept as null for newly added destination
+  },
+  {
+    id: 16,
+    name: "Koloa Kai Condo",
+    location: "Waikoloa, Hawaii",
+    address: "69-1000 KOLEA KAI CIRCLE, #1C, WAIKOLOA, HI 96738",
+    coordinates: { lat: 19.9244, lng: -155.8869 },
+    url: "https://www.goforthglobal.com/dream-home/kolea-kai-condo",
+    type: "anticipated",
+    image: null, // kept as null for newly added destination
+  },
+  {
+    id: 17,
+    name: "San Diego",
+    location: "San Diego, California",
+    address: "849 W Harbor Dr, San Diego, CA 92101",
+    coordinates: { lat: 32.7157, lng: -117.1611 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: SanDiego, // kept as null for newly added destination
+  },
+  {
+    id: 18,
+    name: "Napa California",
+    location: "Napa, California",
+    address: "Downtown Dock, 700 Main St, Napa, CA 94559",
+    coordinates: { lat: 38.2975, lng: -122.2869 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: Napa, // kept as null for newly added destination
+  },
+  {
+    id: 19,
+    name: "30A Florida",
+    location: "Panama City Beach, Florida",
+    address: "124 Hope Town Ln, Panama City Beach, FL 32413",
+    coordinates: { lat: 30.1588, lng: -85.8051 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: ThirtyA, // kept as null for newly added destination
+  },
+  {
+    id: 20,
+    name: "Whistler British Columbia",
+    location: "Whistler, BC, Canada",
+    address: "4545 Blackcomb Wy, Whistler, BC V0N 1B4, Canada",
+    coordinates: { lat: 50.1163, lng: -122.9574 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: Whistler, // kept as null for newly added destination
   },
 ];
 
