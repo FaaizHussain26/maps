@@ -20,6 +20,7 @@ import Napa from "/assets/Napa.png";
 import ThirtyA from "/assets/30A.png";
 import Colorado from "/assets/Colorado.png";
 import Huwai from "/assets/Huwai.jpeg";
+import VillaMir from "/assets/VillaMiramar.png"
 
 // Current Home Locations
 const currentDestinations = [
@@ -226,6 +227,15 @@ const anticipatedDestinations = [
     type: "anticipated",
     image: Whistler, // kept as null for newly added destination
   },
+  {
+    id: 11,
+    name: "Anticipated Destination – Solitude EB 23",
+    location: "St. Croix, U.S. Virgin Islands",
+    address: "23 Solitude EB Unit 23, St. Croix, VI 00820",
+    coordinates: { lat: 17.760732, lng: -64.630272 },
+    type: "anticipated",
+    image: VillaMir
+  }
 ];
 
 const allDestinations = [...currentDestinations, ...anticipatedDestinations];
