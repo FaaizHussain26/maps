@@ -229,10 +229,11 @@ const anticipatedDestinations = [
   },
   {
     id: 11,
-    name: "Anticipated Destination – Solitude EB 23",
+    name: "Villa Miramar, St. Croix",
     location: "St. Croix, U.S. Virgin Islands",
     address: "23 Solitude EB Unit 23, St. Croix, VI 00820",
     coordinates: { lat: 17.760732, lng: -64.630272 },
+    url: "https://www.goforthglobal.com/dream-home/st-croix",
     type: "anticipated",
     image: VillaMir
   }
