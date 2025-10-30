@@ -20,7 +20,7 @@ import Napa from "/assets/Napa.png";
 import ThirtyA from "/assets/30A.png";
 import Colorado from "/assets/Colorado.png";
 import Huwai from "/assets/Huwai.jpeg";
-import VillaMir from "/assets/VillaMiramar.png"
+// import VillaMir from "/assets/VillaMiramar.png"
 
 // Current Home Locations
 const currentDestinations = [
@@ -226,16 +226,6 @@ const anticipatedDestinations = [
     url: "https://www.goforthglobal.com/interest-sign-up",
     type: "anticipated",
     image: Whistler, // kept as null for newly added destination
-  },
-  {
-    id: 11,
-    name: "Villa Miramar, St. Croix",
-    location: "St. Croix, U.S. Virgin Islands",
-    address: "23 Solitude EB Unit 23, St. Croix, VI 00820",
-    coordinates: { lat: 17.760732, lng: -64.630272 },
-    url: "https://www.goforthglobal.com/dream-home/st-croix",
-    type: "anticipated",
-    image: VillaMir
   }
 ];
 
