@@ -18,8 +18,11 @@ import SanDiego from "/assets/San Diego.png";
 import Whistler from "/assets/Whistler.png";
 import Napa from "/assets/Napa.png";
 import ThirtyA from "/assets/30A.png";
-import Colorado from "/assets/Colorado.png";
+// import Colorado from "/assets/Colorado.png";
 import Huwai from "/assets/Huwai.jpeg";
+import SthCrox from "/assets/snt_crox.png"
+import PentHouse from "/assets/penthouse.jpeg"
+import BorgiDi from "/assets/borgo_di.png"
 // import VillaMir from "/assets/VillaMiramar.png"
 
 // Current Home Locations
@@ -169,16 +172,6 @@ const anticipatedDestinations = [
   },
   {
     id: 15,
-    name: "Beaver Creek Townhome",
-    location: "Beaver Creek, Colorado",
-    address: "38460 US-6, Avon, CO 81620",
-    coordinates: { lat: 39.6308, lng: -106.5217 },
-    url: "https://www.goforthglobal.com/dream-home/beaver-creek-co",
-    type: "anticipated",
-    image: Colorado, // kept as null for newly added destination
-  },
-  {
-    id: 16,
     name: "Koloa Kai Condo",
     location: "Waikoloa, Hawaii",
     address: "69-1000 KOLEA KAI CIRCLE, #1C, WAIKOLOA, HI 96738",
@@ -188,7 +181,7 @@ const anticipatedDestinations = [
     image: Huwai, // kept as null for newly added destination
   },
   {
-    id: 17,
+    id: 16,
     name: "San Diego",
     location: "San Diego, California",
     address: "849 W Harbor Dr, San Diego, CA 92101",
@@ -198,7 +191,7 @@ const anticipatedDestinations = [
     image: SanDiego, // kept as null for newly added destination
   },
   {
-    id: 18,
+    id: 17,
     name: "Napa California",
     location: "Napa, California",
     address: "Downtown Dock, 700 Main St, Napa, CA 94559",
@@ -208,7 +201,7 @@ const anticipatedDestinations = [
     image: Napa, // kept as null for newly added destination
   },
   {
-    id: 19,
+    id: 18,
     name: "30A Florida",
     location: "Panama City Beach, Florida",
     address: "124 Hope Town Ln, Panama City Beach, FL 32413",
@@ -218,7 +211,7 @@ const anticipatedDestinations = [
     image: ThirtyA, // kept as null for newly added destination
   },
   {
-    id: 20,
+    id: 19,
     name: "Whistler British Columbia",
     location: "Whistler, BC, Canada",
     address: "4545 Blackcomb Wy, Whistler, BC V0N 1B4, Canada",
@@ -226,6 +219,36 @@ const anticipatedDestinations = [
     url: "https://www.goforthglobal.com/interest-sign-up",
     type: "anticipated",
     image: Whistler, // kept as null for newly added destination
+  },
+  {
+    id: 20,
+    name: "Villa Miramar, St. Croix ",
+    location: "Estate Solitude, East End 'B', St. Croix, US Virgin Islands",
+    address: "23 Solitude EB Unit 23, Christiansted, St. Croix, VI 00820, USVI",
+    coordinates: { lat: 17.760732, lng: -64.630272 },
+    url: "https://www.goforthglobal.com/dream-home/st-croix",
+    type: "anticipated",
+    image: SthCrox, 
+  },
+  {
+    id: 21,  
+    name: "Borgo di Vagli",
+    location: "Mercatale di Cortona, Arezzo (AR), Tuscany, Italy",
+    address: "Località Vagli, 52040 Mercatale di Cortona (AR), Italy",
+    coordinates: { lat: 43.27314, lng: 12.10752 },
+    url: "https://www.goforthglobal.com/dream-home/borgo-di-vagli-villa",
+    type: "anticipated",
+    image: BorgiDi
+  },
+  {
+    id: 22, 
+    name: "Penthouse at The Peaks",
+    location: "Mountain Village / The Peaks Resort, Telluride, CO, USA",
+    address: "136 Country Club Dr, Telluride, CO 81435, USA",
+    coordinates: { lat: 37.9370, lng: -107.8650 },  // approximate for Telluride/Mountain Village area
+    url: "https://www.goforthglobal.com/dream-home/penthouse-at-the-peaks",
+    type: "anticipated",
+    image: PentHouse
   }
 ];
 
