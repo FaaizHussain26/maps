@@ -254,7 +254,7 @@ export default function DestinationsPage() {
 
       const script = document.createElement("script");
       // In a real React app, you would use process.env.REACT_APP_GOOGLE_MAPS_API_KEY or similar
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyApJ0TAYZM_KsdqTD_wJWnK-asOJGnIn5A&callback=initMap`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDAqJ3fDweIPZ_wEi71tpreUjPxddSWAZY&callback=initMap`;
       script.async = true;
       script.defer = true;
       window.initMap = initializeMap;
