@@ -23,6 +23,7 @@ import Huwai from "/assets/Huwai.jpeg";
 import SthCrox from "/assets/snt_crox.png"
 import PentHouse from "/assets/penthouse.jpeg"
 import BorgiDi from "/assets/borgo_di.png"
+import FiveStarTurks from "/assets/5_sta_brand_Turks_Caicos_One.png"
 // import VillaMir from "/assets/VillaMiramar.png"
 
 // Current Home Locations
@@ -95,7 +96,7 @@ const currentDestinations = [
     coordinates: { lat: 21.7587, lng: -72.2845 },
     url: "https://www.goforthglobal.com/dream-home/5-star-caribbean-resort",
     type: "current",
-    image: FiveStarBrandTurks, 
+    image: FiveStarBrandTurks,
   },
   {
     id: 8,
@@ -160,7 +161,7 @@ const anticipatedDestinations = [
     type: "anticipated",
     image: RocksImage, // Direct path from public folder
   },
-    {
+  {
     id: 14,
     name: "5-Star Branded Caribbean Resort (2 BEDROOM)",
     location: "Turks & Caicos",
@@ -228,10 +229,10 @@ const anticipatedDestinations = [
     coordinates: { lat: 17.760732, lng: -64.630272 },
     url: "https://www.goforthglobal.com/dream-home/st-croix",
     type: "anticipated",
-    image: SthCrox, 
+    image: SthCrox,
   },
   {
-    id: 21,  
+    id: 21,
     name: "Borgo di Vagli",
     location: "Mercatale di Cortona, Arezzo (AR), Tuscany, Italy",
     address: "Località Vagli, 52040 Mercatale di Cortona (AR), Italy",
@@ -241,7 +242,7 @@ const anticipatedDestinations = [
     image: BorgiDi
   },
   {
-    id: 22, 
+    id: 22,
     name: "Penthouse at The Peaks",
     location: "Mountain Village / The Peaks Resort, Telluride, CO, USA",
     address: "136 Country Club Dr, Telluride, CO 81435, USA",
@@ -249,6 +250,19 @@ const anticipatedDestinations = [
     url: "https://www.goforthglobal.com/dream-home/penthouse-at-the-peaks",
     type: "anticipated",
     image: PentHouse
+  },
+  {
+    id: 22,
+    name: "Private Ski In/Out Residence in Deer Valley",
+    location: "Mountain Village / The Peaks Resort, Telluride, CO, USA",
+    address: "136 Country Club Dr, Telluride, CO 81435, USA",
+    coordinates: {
+      lat: 37.9370,
+      lng: -107.8650
+    },
+    url: "https://www.goforthglobal.com/dream-home/private-residence-in-deer-valley",
+    type: "anticipated",
+    image: FiveStarTurks
   }
 ];
 
@@ -356,27 +370,23 @@ export default function DestinationsPage() {
       box-shadow: 0 6px 20px rgba(0,0,0,0.2); 
       font-family: 'Inter', sans-serif;
     ">
-      ${
-        destination.image
-          ? `<img src="${destination.image}" alt="${destination.name}" style="
+      ${destination.image
+              ? `<img src="${destination.image}" alt="${destination.name}" style="
             width: 100%;
             height: 150px;
             object-fit: cover;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
           " />`
-          : ""
-      }
+              : ""
+            }
       <div style="padding: 12px;">
-        <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #333;">${
-          destination.name
-        }</h3>
-        <p style="margin: 2px 0 0; color: #555; font-size: 15px;">${
-          destination.location
-        }</p>
-        <p style="margin: 2px 0 12px; color: #777; font-size: 13px;">${
-          destination.address
-        }</p>
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #333;">${destination.name
+            }</h3>
+        <p style="margin: 2px 0 0; color: #555; font-size: 15px;">${destination.location
+            }</p>
+        <p style="margin: 2px 0 12px; color: #777; font-size: 13px;">${destination.address
+            }</p>
         <button
           id="explore-btn-${destination.id}"
           style="
