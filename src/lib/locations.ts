@@ -1,5 +1,4 @@
 import FiveStarBrandTurks from "/assets/5_sta_brand_Turks_Caicos.png";
-import FiveStarBrandFred from "/assets/5_star_brand_Fredericksburg_tx.png";
 import FiveStarBrandMiches from "/assets/5_star_brand_Miches_DR.jpg";
 import DeerHollowImage from "/assets/Deer_Hollow_Hideaway.png";
 import McHenryImage from "/assets/McHenry_Canyon_Haven.png";
@@ -10,7 +9,6 @@ import TamarindoImage from "/assets/Tamarindo.jpg";
 import VillaNicklausImage from "/assets/Villa_Nicklaus.png";
 import CapCanaImage from "/assets/cap_cana_1.png";
 import DolceGabbana from "/assets/d_and_g.png";
-import SanDiego from "/assets/San Diego.png";
 import Whistler from "/assets/Whistler.png";
 import Napa from "/assets/Napa.png";
 import ThirtyA from "/assets/30A.png";
@@ -115,12 +113,42 @@ const anticipatedDestinations = [
   {
     id: 11,
     name: "5-Star Branded Residence",
-    location: "Fredericksburg, TX",
-    address: "Fredericksburg, Texas",
-    coordinates: { lat: 30.2752, lng: -98.8719 },
-    url: "https://www.goforthglobal.com/dream-home/5-star-branded-residence",
+    location: "Costa Rica",
+    address: "H8RM+4PM, Provincia de Guanacaste, Playa Buena, Costa Rica",
+    coordinates: { lat: 10.35, lng: -85.83 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
     type: "anticipated",
-    image: FiveStarBrandFred, // Direct path from public folder
+    image: null,
+  },
+  {
+    id: 23,
+    name: "5-Star Branded Residence",
+    location: "Belize",
+    address: "Cayo Rosario Island, San Pedro, Belize",
+    coordinates: { lat: 17.93, lng: -87.94 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: null,
+  },
+  {
+    id: 24,
+    name: "Palm Coast Oceanfront Luxury",
+    location: "Palm Coast, Florida",
+    address: "21 Ocean Dune Circle, Palm Coast, FL",
+    coordinates: { lat: 29.58, lng: -81.18 },
+    url: "https://www.goforthglobal.com/dream-home/palm-coast",
+    type: "anticipated",
+    image: null,
+  },
+  {
+    id: 25,
+    name: "Oceanfront Residence",
+    location: "San Juan, Puerto Rico",
+    address: "San Juan Puerto Rico",
+    coordinates: { lat: 18.47, lng: -66.10 },
+    url: "https://www.goforthglobal.com/interest-sign-up",
+    type: "anticipated",
+    image: null,
   },
   {
     id: 12,
@@ -168,19 +196,9 @@ const anticipatedDestinations = [
     location: "Waikoloa, Hawaii",
     address: "69-1000 KOLEA KAI CIRCLE, #1C, WAIKOLOA, HI 96738",
     coordinates: { lat: 19.9244, lng: -155.8869 },
-    url: "https://www.goforthglobal.com/dream-home/kolea-kai-condo",
-    type: "anticipated",
-    image: Huwai, // kept as null for newly added destination
-  },
-  {
-    id: 17,
-    name: "San Diego",
-    location: "San Diego, California",
-    address: "849 W Harbor Dr, San Diego, CA 92101",
-    coordinates: { lat: 32.7157, lng: -117.1611 },
     url: "https://www.goforthglobal.com/interest-sign-up",
     type: "anticipated",
-    image: SanDiego, // kept as null for newly added destination
+    image: Huwai, // kept as null for newly added destination
   },
   {
     id: 18,
